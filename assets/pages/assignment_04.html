@@ -22,8 +22,11 @@
                 <!-- task-01 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span> Add Two Numbers</h2>
                         <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number 1</label>
                             <input type="number" id="sumNum1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Number 2</label>
                             <input type="number" id="sumNum2" min="0" class="p-2 border-2 border-indigo-800 rounded mt-2">
                         </div>
                         <div class="mt-4">
@@ -36,8 +39,11 @@
                 <!-- task-02 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span> Subtract Two Numbers</h2>
                         <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number 1</label>
                             <input type="number" id="subNum1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Number 2</label>
                             <input type="number" id="subNum2" min="0" class="p-2 border-2 border-indigo-800 rounded mt-2">
                         </div>
                         <div class="mt-4">
@@ -50,8 +56,11 @@
                 <!-- task-03 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span> Multiply Two Numbers</h2>
                         <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number 1</label>
                             <input type="number" id="mulNum1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Number 2</label>
                             <input type="number" id="mulNum2" min="0" class="p-2 border-2 border-indigo-800 rounded mt-2">
                         </div>
                         <div class="mt-4">
@@ -64,8 +73,11 @@
                 <!-- task-04 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span> Divide First Number By Second</h2>
                         <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number 1</label>
                             <input type="number" id="divNum1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Number 2</label>
                             <input type="number" id="divNum2" min="0" class="p-2 border-2 border-indigo-800 rounded mt-2">
                         </div>
                         <div class="mt-4">
@@ -78,8 +90,11 @@
                 <!-- task-05 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 5.</span> Find Remainder of Division</h2>
                         <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number 1</label>
                             <input type="number" id="remNum1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Number 2</label>
                             <input type="number" id="remNum2" min="0" class="p-2 border-2 border-indigo-800 rounded mt-2">
                         </div>
                         <div class="mt-4">
@@ -92,13 +107,236 @@
                 <!-- task-06 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span> Check If Number Is Positive</h2>
                         <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number</label>
                             <input type="number" id="posNum" class="p-2 border-2 border-purple-800 rounded">
                         </div>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isPositive()">Positive</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isPositive()">Check Positive</button>
                         </div>
                         <div><p class="text-2xl text-indigo-600">Answer: <span id="posOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-07 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 7.</span> Check If Number Is Negative</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number</label>
+                            <input type="number" id="negNum" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isNegative()">Check Negative</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Answer: <span id="negOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-08 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 8.</span> Check If Number Is Even Or Odd</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number</label>
+                            <input type="number" id="evenNum" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="checkEven()">Even / Odd</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Answer: <span id="evenOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-09 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 9.</span> Check If Numbers Are Equal</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number</label>
+                            <input type="number" id="equalNum" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isEqual()">Check Equal</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Answer: <span id="equalOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-10 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 10.</span> Compare Two Numbers</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Number 1</label>
+                            <input type="number" id="compareNum1" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Number 2</label>
+                            <input type="number" id="compareNum2" class="p-2 border-2 border-purple-800 rounded mt-2">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="compareNumbers()">Compare Numbers</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Answer: <span id="compareOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-11 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 11.</span> Return Full User Name</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">First Name</label>
+                            <input type="text" id="firstName" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Last Name</label>
+                            <input type="text" id="lastName" class="p-2 border-2 border-purple-800 rounded mt-2">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="getFullName()">Create Full User Name</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Full User Name: <span id="fullNameOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-12 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 12.</span> Get Pass or Fail Grade
+</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Obtain Marks</label>
+                            <input type="number" id="obtainMarks" min="0" max="100" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="getGrade()">Pass / Fail</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Grade: <span id="obtainMarksOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-13 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 13.</span> Check If Teenager Or Not</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Age</label>
+                            <input type="number" id="age" min="0" max="100" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isTeenager()">Teenager or Not</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Grade: <span id="isTeenagerOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-14 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 14.</span> Return Personalized Greeting Message</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">User Name</label>
+                            <input type="text" id="greetUserName" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="greetUser()">Greetings</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="greetUserOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-15 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 15.</span> Check Voting Age Eligibility</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Age</label>
+                            <input type="number" id="eligibility" min="0" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isEligibleToVote()">Check Eligibility</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="isEligibleToVoteOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-16 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 16.</span> Find Absolute Value</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Value</label>
+                            <input type="number" id="absoluteValue" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="findAbsoluteValue()">Check Absolute Value</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="absoluteValueOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-17 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 17.</span> Check Temperature Condition</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Temperature</label>
+                            <input type="number" id="temperature" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="checkTemperature()">Temperature Condition</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="temperatureOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-18 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 18.</span> Determine Triangle Type</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Triangle Side 1</label>
+                            <input type="number" id="triangleSide1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Triangle Side 2</label>
+                            <input type="number" id="triangleSide2" min="0" class="p-2 border-2 border-purple-800 rounded mt-2">
+                            <label class="text-lg mt-1">Triangle Side 3</label>
+                            <input type="number" id="triangleSide3" min="0" class="p-2 border-2 border-purple-800 rounded mt-2">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="getTriangleType()">Triangle Type</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="triangleTypeOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-19 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 19.</span>Calculate Discounted Price</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Price</label>
+                            <input type="number" id="price" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <label class="text-lg mt-1">Discounted Percentage</label>
+                            <input type="number" id="percentage" min="0" max="100" class="p-2 border-2 border-purple-800 rounded mt-2">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="calculateDiscountedPrice()">Check Discounted Price</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="discountedPriceOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+                
+                <!-- task-20 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 20.</span> Validate Password Length</h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Password</label>
+                            <input type="password" id="password" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="isPasswordValid()">Validate Password</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600"><span id="passwordValidOutput" class="text-purple-700"></span></p></div>
                     </div>
                 </div>
             </div>
