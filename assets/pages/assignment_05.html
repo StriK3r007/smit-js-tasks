@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/output.css">
-    <title>JS Assignment 04 | Functions</title>
+    <title>JS Assignment 05 | DOM Manipulation</title>
 </head>
 <body>
     <section class="text-gray-600 body-font">
@@ -22,20 +22,71 @@
                 <!-- task-01 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span> Add Two Numbers</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span></h2>
                         <div class="flex flex-col g-2">
-                            <label class="text-lg mb-1">Number 1</label>
-                            <input type="number" id="sumNum1" min="0" class="p-2 border-2 border-purple-800 rounded">
-                            <label class="text-lg mt-1">Number 2</label>
-                            <input type="number" id="sumNum2" min="0" class="p-2 border-2 border-indigo-800 rounded mt-2">
+                            <p class="text-purple-800" id="message">Hello!</p>
                         </div>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="addTwoNumbers()">Sum</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="changeParagraph()">Click!</button>
                         </div>
-                        <div><p class="text-2xl text-indigo-600">Answer: <span id="sumOutput" class="text-purple-700"></span></p></div>
                     </div>
                 </div>
 
+                <!-- task-02 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Input Value</label>
+                            <input type="number" id="inputValue" min="0" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="inputValue()">Show <i class="ri-restaurant-line"></i></button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Result: <span id="result" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-03 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4" id="container">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-purple-800">Click to Change Background Color to light blue</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="changeBackground()">Change Background Color</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- task-04 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900" id="changeCol"><span class="font-bold">Task 3.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-purple-800">Click to Change heading (h1) Color to red</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="changeH1Color()">Change Heading Color</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- task-05 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 5.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <label class="text-lg mb-1">Input Value</label>
+                            <input type="number" id="num1" min="0" class="p-2 border-2 border-purple-800 rounded">
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="showInputNum()">Show <i class="ri-restaurant-line"></i></button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
