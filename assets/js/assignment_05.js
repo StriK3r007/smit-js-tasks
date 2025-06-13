@@ -60,3 +60,44 @@ function updateWidth(){
 }
 
 // task_10 | Get the email entered in an input with id "email" and print it in the console.
+function getEmail(){
+    let input = document.getElementById("email").value
+    let result = document.getElementById("outputEmail")
+    if (input === '') {
+        input = "Enter a valid email address."
+    }
+    result.innerText = input
+    console.log(input)
+}
+
+// task_11 | Select a paragraph and update its font size to 24px.
+function changeParagraphFontSize() {
+    let paragraph = document.getElementById("changeParagraphFontSize")
+    paragraph.classList.add("text-red-500")
+    paragraph.classList.add("text-3xl")
+}
+
+// task_12 | On button click, get a name from input "fullName" and set the text "Hello, [name]" inside a div "greeting".
+function getFullName() {
+    let userName = document.getElementById("userName").value
+    let result = document.getElementById("outputFullName")
+    if (userName === '') {
+        userName = "Please enter your name."
+        result.innerHTML = userName
+    }else {
+        result.innerHTML = (`Hello, ${userName}`)
+    }
+}
+
+// task_13 | Select an image with id "profilePic" and change its src to another image URL.
+function changeImageSource() {
+    let result = document.getElementById("changeImageSourceOutput")
+    let imageSource = document.getElementById("imageSource").value
+    if (imageSource === '') {
+        imageSource = "Please enter image source."
+        result.innerHTML = imageSource
+        console.log("Image source not found")
+    }else {
+        document.getElementById("profilePic").src = imageSource
+    }
+}
