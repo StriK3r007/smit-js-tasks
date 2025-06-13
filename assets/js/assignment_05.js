@@ -30,4 +30,33 @@ function showInputNum(){
     result.innerText = input
 }
 
-// task_05 | Select a button with class "submit-btn" and log "Button Clicked" to the console when it's clicked.
+// task_06 | Select a button with class "submit-btn" and log "Button Clicked" to the console when it's clicked.
+function submitButton(){
+    console.log("Button Clicked!")
+    let result = document.getElementById("outputSubmitButton")
+    result.innerText = "Button Clicked!"
+}
+
+// task_07 | Get values from two inputs with ids "first" and "second", add them (as numbers), and show the result in a span with id "sum".
+function sumTwoValues(){
+    let num1 = document.getElementById("value1").value
+    let num2 = document.getElementById("value2").value
+    let result = document.getElementById("sumTwoValuesOutput")
+    result.innerText = Number(num1) + Number(num2)
+}
+
+// task_08 | Change the text of a paragraph with class "description" to "Updated successfully".
+function descriptionUpdate(){
+    console.log("Updated successfully!")
+    let result = document.getElementById("descriptionUpdate")
+    result.innerText = "Updated successfully!"
+}
+
+// task_09 | Select a div with id "box" and set its width to 200px and background color to green.
+function updateWidth(){
+    let containerBg = document.getElementById("containerWidth")
+    containerBg.classList.add("bg-green-500")
+    containerBg.style.width = "200px"
+}
+
+// task_10 | Get the email entered in an input with id "email" and print it in the console.
