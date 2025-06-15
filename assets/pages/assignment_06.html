@@ -22,32 +22,118 @@
                 <!-- task-01 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span> Change the text of the paragraph with id "message" to "Welcome!".</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span></h2>
                         <div class="flex flex-col g-2">
-                            <p class="text-purple-800" id="message">Hello!</p>
+                            <label class="text-lg mb-1">Name</label>
+                            <input type="text" id="studentName" min="0" class="p-2 border-2 border-purple-800 rounded">
                         </div>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="changeParagraph()">Click!</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task01()">Push</button>
                         </div>
+                        <div><p class="text-2xl text-indigo-600">Array: <span id="studentNamesOutput" class="text-purple-700"></span></p></div>
                     </div>
                 </div>
 
                 <!-- task-02 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span> Get the value from "nameInput" and display it in the "result" div.</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span></h2>
                         <div class="flex flex-col g-2">
-                            <label class="text-lg mb-1">Input Value</label>
-                            <input type="number" id="inputValue" min="0" class="p-2 border-2 border-purple-800 rounded">
+                            <p class="text-2xl text-indigo-600">Fruits: <span class="text-purple-700">Apple, Orange, Mango, Banana</span></p>
                         </div>
+                        
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="inputValue()">Show</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task02()">Pop</button>
                         </div>
-                        <div><p class="text-2xl text-indigo-600">Value: <span id="result" class="text-purple-700">00</span></p></div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="fruitsUpdatedOutput" class="text-purple-700"></span></p></div>
                     </div>
                 </div>
 
+                <!-- task-03 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Days: <span class="text-purple-700">Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</span></p>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task03()">unShift</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="daysUpdatedOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-04 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Colors: <span class="text-purple-700">Red, Green, Blue, Yellow, Black, Cyan</span></p>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task04()">Shift</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="colorsUpdatedOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-05 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 5.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Subjects: <span class="text-purple-700">Urdu, English, Computer, History, Geography, Arts</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task05()">Shift</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="subjectsUpdatedOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
                 
+                <!-- task-06 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Cities: <span class="text-purple-700">Quetta, Karachi, Islamabad, Lahore, Peshawar</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task06()">Shift</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="citiesUpdatedOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-07 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 7.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Countries: <span class="text-purple-700">Pakistan, Iran, Afghanistan, China, Russia, India</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task07()">Slice</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="countriesUpdatedOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-08 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 8.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Countries: <span class="text-purple-700">Pakistan, Iran, Afghanistan, China, Russia, India</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task07()">Slice</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Updated: <span id="countriesUpdatedOutput" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
