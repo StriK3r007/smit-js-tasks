@@ -51,7 +51,7 @@ function task06() {
     let cities = ["Quetta", "Karachi", "Islamabad", "Lahore", "Peshawar"]
     console.log(`Array: ${cities}`)
     let citiesUpdated = cities.splice(0, 2)
-    console.log(`Updated Array: ${cities}`)
+    console.log(`After removing 2 items: ${cities}`)
     let citiesUpdatedOutput = document.querySelector("#citiesUpdatedOutput").innerHTML = cities
 }
 
@@ -61,8 +61,36 @@ function task07() {
     let countries = ["Pakistan", "Iran", "Afghanistan", "China", "Russia", "India"]
     console.log(`Array: ${countries}`)
     let countriesUpdated = countries.slice(0, 3)
-    console.log(`Updated Array: ${countriesUpdated}`)
+    console.log(`1st 3 items of array: ${countriesUpdated}`)
     let countriesUpdatedOutput = document.querySelector("#countriesUpdatedOutput").innerHTML = countriesUpdated
 }
 
 // task_08 | Convert the string "apple,banana,mango" into an array using split().
+function task08() {
+    console.info("Task 08")
+    let string = "apple,banana,mango";
+    console.log(`String: ${string}`)
+    let stringArr = string.split(",")
+    console.log(`Array: ${stringArr}`)
+    let stringToArrayOutput = document.querySelector("#stringToArrayOutput").innerHTML = stringArr
+}
+
+// task_09 | Join an array of characters ['J','S'] into a single string using join().
+function task09() {
+    console.info("Task 09")
+    let charactersArr = ['J','S'];
+    console.log(`Characters Array: ${charactersArr}`)
+    let charactersString = charactersArr.join()
+    console.log(`Single String: ${charactersString}`)
+    let joinCharactersOutput = document.querySelector("#joinCharactersOutput").innerHTML = charactersString
+}
+// task_10 | 10. Combine two arrays ['pen','pencil'] and ['eraser','sharpener'] using concat().
+function task10() {
+    console.info("Task 10")
+    let arrOne = ['pen','pencil'];
+    let arrTwo = ['eraser','sharpener'];
+    console.log(`1st Array: ${arrOne}`)
+    console.log(`2nd Array: ${arrTwo}`)
+    console.log(`Concateneted Array: ${arrOne.concat(arrTwo)}`)
+    let mergedArrayOutput = document.querySelector("#mergedArrayOutput").innerHTML = arrOne.concat(arrTwo)
+}
