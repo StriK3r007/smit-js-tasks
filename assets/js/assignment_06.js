@@ -84,7 +84,7 @@ function task09() {
     console.log(`Single String: ${charactersString}`)
     let joinCharactersOutput = document.querySelector("#joinCharactersOutput").innerHTML = charactersString
 }
-// task_10 | 10. Combine two arrays ['pen','pencil'] and ['eraser','sharpener'] using concat().
+// task_10 | Combine two arrays ['pen','pencil'] and ['eraser','sharpener'] using concat().
 function task10() {
     console.info("Task 10")
     let arrOne = ['pen','pencil'];
@@ -93,4 +93,69 @@ function task10() {
     console.log(`2nd Array: ${arrTwo}`)
     console.log(`Concateneted Array: ${arrOne.concat(arrTwo)}`)
     let mergedArrayOutput = document.querySelector("#mergedArrayOutput").innerHTML = arrOne.concat(arrTwo)
+}
+
+// task_11 | Sort an array of numbers [10, 5, 2, 8] using sort() (as strings).
+function task11() {
+    let numbers = [10, 5, 2, 8,];
+    numbers.sort((a, b) => a - b);
+    let sortedArrayOutput = document.querySelector("#sortedArrayOutput")
+    sortedArrayOutput.innerHTML = numbers.join(', ');
+}
+
+// task_12 | Sort an array of names alphabetically using sort().
+function task12() {
+    let names = ['zubair', 'inam', 'kifayat', 'ilham'];
+    names.sort();
+    let sortedNamesOutput = document.querySelector("#sortedNamesOutput")
+    sortedNamesOutput.innerHTML = names.join(', ')
+}
+
+// task_13 | Reverse the order of an array of numbers using reverse().
+function task13() {
+    let numbers = [10, 5, 2, 8,];
+    numbers.reverse()
+    let reverseArrayOutput = document.querySelector("#reverseArrayOutput")
+    reverseArrayOutput.innerHTML = numbers.join(', ');
+}
+
+// task_14 | Use indexOf() to find the index of "Blue" in a colors array.
+function task14() {
+    let colors = ["Red", "Green", "Blue", "Yellow", "Black", "Cyan"];
+    let color = document.querySelector("#arrayIndex").value; 
+    let index = colors.indexOf(color);
+    let indexOfOutput = document.querySelector("#indexOfOutput");
+    if (index !== -1) {
+        indexOfOutput.innerHTML = `The color "${color}" is found at index: ${index}`;
+    } else {
+        indexOfOutput.innerHTML = `The color "${color}" was not found.`;
+    }
+}
+
+// task_15 | Add three new items to an empty array using push().
+function task15() {
+    let Arr = []
+    let itemOne = document.querySelector("#itemOne").value; 
+    let itemTwo = document.querySelector("#itemTwo").value; 
+    let itemThree = document.querySelector("#itemThree").value;
+    let threeItemsOutput = document.querySelector("#threeItemsOutput");
+    if (itemOne == '' || itemTwo == '' || itemThree == '') {
+        threeItemsOutput.innerHTML = "All items are required"
+    }
+    else {
+        Arr.push(itemOne);
+        Arr.push(itemTwo);
+        Arr.push(itemThree);
+        threeItemsOutput.innerHTML = Arr.join(', ');
+    }
+}
+
+// task_16 | Remove the middle item from an array of 5 numbers using splice().
+function task16() {
+    console.info("Task 16")
+    let numbers = [2, 5, 3, 10, 7]
+    console.log(`Array: ${numbers}`)
+    let numbersUpdated = numbers.splice(2, 1)
+    console.log(`After removing middle items: ${numbers}`)
+    let removeMiddleItemOutput = document.querySelector("#removeMiddleItemOutput").innerHTML = numbers
 }
