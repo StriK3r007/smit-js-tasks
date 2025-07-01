@@ -4,7 +4,7 @@ This repository contains my JavaScript assignments and tasks. Below are the main
 
 ## Main Tasks Repository
 
-[Click here to access the main repository](https://github.com/your-username/javascript-tasks)
+[Click here to access the main repository](https://github.com/StriK3r007/smit-js-tasks)
 
 ## Assignments
 
