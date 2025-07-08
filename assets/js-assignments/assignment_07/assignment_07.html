@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/output.css">
+    <title>JS Assignment 07 | Loops</title>
+</head>
+<body>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">JavaScript Assignment No. 07 (Loops)</h1>
+                    <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                </div>
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                    In this fourth JavaScript assignment, I focused on understanding and applying functions. Through various tasks, I explored function declarations, expressions, parameters, return values, and scope. This assignment strengthened my problem-solving skills and deepened my grasp of how functions streamline JavaScript code.
+                </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <!-- task-01 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Fruits: <span class="text-purple-700">["apple", "banana", "cherry"]</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task01()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_01_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-02 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Color: <span class="text-purple-700">["red", "green", "blue"]</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task02()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_02_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-03 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Numbers: <span class="text-purple-700">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task03()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_03_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-04 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span></h2>
+                        
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task04()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_04_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-05 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 5.</span></h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Names: <span class="text-purple-700">["Ali", "Sara", "Ahmed"]</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task05()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_05_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-06 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span></h2>
+                      
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task06()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_06_output" class="text-purple-700">Status</span></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assignment_07.js"></script>
+</body>
+</html>
