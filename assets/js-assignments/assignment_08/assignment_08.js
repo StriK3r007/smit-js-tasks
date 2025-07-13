@@ -3,8 +3,18 @@ const todoList = document.getElementById("todoList");
 
 function toDoApp() {
     const toDo = document.getElementById("todoText").value;
+    if (toDo.length === 0) {
+        Swal.fire({
+            title: "Input Required!",
+            text: "You need to type something first.",
+            icon: "info",
+            confirmButtonText: "OK"
+        });
+        return;
+    }
     toDos.push(toDo);
     toDoRender();
+    console.log(toDos)
 }
 
 function toDoRender() {
@@ -79,24 +89,24 @@ function toDoRender() {
 // }
 
 function toDoEdit(index) {
-  Swal.fire({
-    title: "Edit your to-do",
-    input: "text",
-    inputValue: toDos[index],
-    showCancelButton: true,
-    confirmButtonText: "Save",
-    cancelButtonText: "Cancel",
-    inputValidator: (value) => {
-      if (!value.trim()) {
-        return "To-do cannot be empty!";
-      }
-    }
-  }).then((result) => {
-    if (result.isConfirmed) {
-      toDos[index] = result.value.trim();
-      toDoRender();
-    }
-  });
+    Swal.fire({
+        title: "Edit your to-do",
+        input: "text",
+        inputValue: toDos[index],
+        showCancelButton: true,
+        confirmButtonText: "Save",
+        cancelButtonText: "Cancel",
+        inputValidator: (value) => {
+            if (!value.trim()) {
+                return "To-do cannot be empty!";
+            }
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            toDos[index] = result.value.trim();
+            toDoRender();
+        }
+    });
 }
 
 
@@ -133,22 +143,16 @@ function toDoDeleteAll() {
         confirmButtonText: "Yes, delete all!",
     }).then((result) => {
         if (result.isConfirmed) {
-            toDos.splice(0, toDos.length);
+            toDos.length = 0;
+
             toDoRender();
+
             Swal.fire({
                 title: "Deleted All!",
                 text: "All to-dos deleted.",
                 icon: "success",
             });
-            if (toDos.length === 0) {
-                Swal.fire({
-                    title: "All done!",
-                    text: "There are no to-dos left.",
-                    icon: "info",
-                    //   confirmButtonText: "OK"
-                });
-                return;
-            }
         }
     });
 }
+
