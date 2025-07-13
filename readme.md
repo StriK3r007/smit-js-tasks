@@ -15,6 +15,7 @@ This repository contains my JavaScript assignments and tasks. Below are the main
 5. [Assignment 05: ](https://strik3r007.github.io/smit-js-tasks/assets/js-assignments/assignment_05/assignment_05.html)
 6. [Assignment 06: ](https://strik3r007.github.io/smit-js-tasks/assets/js-assignments/assignment_06/assignment_06.html)
 7. [Assignment 07: ](https://strik3r007.github.io/smit-js-tasks/assets/js-assignments/assignment_07/assignment_07.html)
+7. [Assignment 08: ](https://strik3r007.github.io/smit-js-tasks/assets/js-assignments/assignment_08/assignment_08.html)
 
 
 
