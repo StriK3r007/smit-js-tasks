@@ -2,21 +2,79 @@
 // Write a function that takes a Date object and returns a formatted string like:
 // "Saturday, 9 August 2025".
 function task01() {
-    const date = Date()
-    console.log(date)
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const date = new Date()
+    const day = days[date.getDay()]
+    const dayNum = date.getDate()
+    const month = months[date.getMonth()]
+    const year = date.getFullYear()
+    const customDate = `${day}, ${dayNum} ${month} ${year}`
+    console.log(customDate)
+    document.getElementById('task_01_output').innerHTML = customDate
 }
 
 // task_02. Elapsed Time in Minutes
 // Given two timestamps, calculate how many minutes have passed between them.
+function task02() {
+  const timeStampOne = document.getElementById("timeStampOne").value
+  const timeStampTwo = document.getElementById("timeStampTwo").value
+  const task_02_output = document.getElementById("task_02_output")
+  if (timeStampOne == '' || timeStampTwo =='') {
+    return task_02_output.innerText = 'Please select valid time'
+  }
+  const timeStampDiff = (new Date(timeStampTwo) - new Date(timeStampOne)) / (1000*60)
+  console.log(timeStampDiff,)
+  task_02_output.innerText = `${timeStampDiff} minutes have passed`
+}
 
 // task_03. Age Calculator from Full Birthdate
 // Create a function that accepts a full birthdate (YYYY-MM-DD) and calculates the age in years, months, and days.
+function task03() {
+  const birthdate = document.getElementById('birthDate').value
+  const task_03_output = document.getElementById('task_03_output')
+  const currentDate = new Date()
+  const birthDate = new Date(birthdate)
+
+  let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
+  let ageMonths = currentDate.getMonth() - birthDate.getMonth()
+  let ageDays = currentDate.getDate() - birthDate.getDate()
+
+  if (ageDays < 0) {
+    ageMonths--;
+    ageDays += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+  }
+
+  if (ageMonths < 0) {
+    ageYears--;
+    ageMonths += 12;
+  }
+
+  // console.log(`Age: ${ageYears} years, ${ageMonths} months, ${ageDays} Days`)
+  task_03_output.innerText = (`${ageYears} years old`)
+}
 
 // task_04. Get First Day of Current Month
 // Return the date of the first day of the current month.
+function task04() {
+  const currentDate = new Date()
+  const task_04_output = document.getElementById("task_04_output")
+  currentDate.setDate(1)
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September"];
+  const firstDayOfCurrentMonth = days[currentDate.getDay()]
+  task_04_output.innerText = `First day of ${months[currentDate.getMonth()]} is ${firstDayOfCurrentMonth}` 
+}
 
 // task_05. Get Last Day of Current Month 
 // Write a function that returns the last date (e.g., 31, 30, or 28/29) of the current month.
+function task05() {
+  const currentDate = new Date()
+  currentDate.setDate(1)
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const firstDayOfCurrentMonth = days[currentDate.getDay()]
+  console.log(firstDayOfCurrentMonth)
+}
 
 // task_06. Human-Friendly "Time Ago"
 // Create a function that returns strings like:
@@ -24,9 +82,65 @@ function task01() {
 // ○ "5 minutes ago"
 // ○ "2 hours ago"
 // ○ "1 day ago" based on a past timestamp.
+function task06() {
+  const currentDate = new Date()
+  const timeStamp= document.getElementById('timeStamp_06').value
+  const pastDate = new Date(timeStamp)
+  const task_06_output = document.getElementById('task_06_output')
+
+  if (timeStamp == '') {
+    return task_06_output.innerText = 'Please select valid timestamp'
+  }
+
+  const timeStampDiff = currentDate - pastDate
+
+  const seconds = Math.floor(timeStampDiff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+
+  if (seconds < 60) {
+    return task_06_output.innerText = "Just now";
+  } else if (minutes < 60) {
+    return task_06_output.innerText = `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+  } else if (hours < 24) {
+    return task_06_output.innerText = `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  } else if (days < 30) {
+    return task_06_output.innerText = `${days} day${days > 1 ? 's' : ''} ago`;
+  } else {
+    return task_06_output.innerText = pastDate.toLocaleDateString();  
+  }
+}
 
 // task_07. Countdown Timer
 // Create a simple countdown function to a future date (e.g., New Year), showing days, hours, minutes, seconds remaining.
+function task07() {
+  const futuredate = document.getElementById('futuredate').value
+  const task_07_output = document.getElementById('task_07_output')
+  const futureDate = new Date(futuredate)
+
+  if (futuredate == '') {
+    return task_07_output.innerText = 'Please select valid time'
+  }
+
+  const interval = setInterval(() => {
+    const now = new Date();
+    const timeDifference = futureDate - now;
+
+    if (timeDifference <= 0) {
+      clearInterval(interval);
+      console.log("The countdown has finished!");
+      return;
+    }
+
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    task_07_output.innerText = (`${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+  }, 1000);
+}
 
 // task_08. Time Difference in Hours and Minutes
 // Given two dates, return the difference in hours and minutes, like: "3 hours 25 minutes".
@@ -70,3 +184,97 @@ function task01() {
 
 // task_20. Get the Number of Days in Any Month
 // Write a function that takes a month and year, and returns how many days are in that month (handle leap years too).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Exa
+// let currentDate = new Date();
+// console.log(currentDate);
+// console.log(currentDate.toString());
+
+// console.log(currentDate.getDate());
+// console.log(currentDate.getHours());
+// console.log(currentDate.getMinutes());
+// console.log(currentDate.getSeconds());
+// console.log(currentDate.getMilliseconds());
+// console.log(currentDate.getTime());
+
+
+
+
+
+
+
+// kisi banda ki age nikaalni haa
+
+let currentDate = new Date().getTime();
+let birthdata = new Date("July 10, 2005 13:25:00").getTime()
+let remainingMilliseconds = currentDate - birthdata
+let calculateAge = Math.floor(remainingMilliseconds / 1000 / 60 / 60 / 24 / 365)
+
+console.log(calculateAge);
+
+
+
+function changePage(){
+    localStorage.setItem("calculatedAge" , JSON.stringify(["apple" , "banana" , "orange"]))
+    window.location = "about.html"
+    // console.log(window.location);
+    
+    
+}
+
+
+
+
+
+
+// let currentDate = new Date();
+// // currentDate.setFullYear(2005)
+// // currentDate.setHours(13)
+// console.log(currentDate.getDay());
+
+
+
+// Manual, locale-agnostic solution
+const WEEKDAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function formatDate(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) {
+    throw new TypeError('Expected a valid Date object');
+  }
+  const weekday = WEEKDAYS[date.getDay()];
+  const day = date.getDate();            // no leading zero
+  const month = MONTHS[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${weekday}, ${day} ${month} ${year}`;
+}
+
+// Example:
+formatDate(new Date(2025, 7, 9)); // "Saturday, 9 August 2025"
+*/

@@ -34,14 +34,68 @@
                 <!-- task-02 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span> Custom Date Formatter</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span> Elapsed Time in Minutes</h2>
                         <div class="flex flex-col g-2">
-                            <p class="text-2xl text-indigo-600">Fruits: <span class="text-purple-700">["apple", "banana", "cherry"]</span></p>
+                            <p class="text-2xl text-indigo-600">Timestamp1: <span class="text-purple-700"><input type="datetime-local" id="timeStampOne"></span></p>
+                            <p class="text-2xl text-indigo-600">Timestamp2: <span class="text-purple-700"><input type="datetime-local" id="timeStampTwo"></span></p>
                         </div>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task01()">Run</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task02()">Run</button>
                         </div>
-                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_01_output" class="text-purple-700"></span></p></div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_02_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-03 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span> Age Calculator from Full Birthdate</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Birth Date: <span class="text-purple-700"><input type="date" id="birthDate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task03()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_03_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-04 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span> Get First Day of Current Month</h2>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task04()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_04_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-06 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span> Custom Date Formatter</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Timestamp: <span class="text-purple-700"><input type="datetime-local" id="timeStamp_06"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task06()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_06_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-07 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 7.</span> Countdown Timer</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Future Date: <span class="text-purple-700"><input type="date" id="futuredate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task07()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_07_output" class="text-purple-700"></span></p></div>
                     </div>
                 </div>
             </div>
@@ -51,3 +105,46 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
+
+<!-- 
+<body>
+  <h2>Calculate Time Difference Between Two Timestamps</h2>
+  <form id="timestamp-form">
+    <label for="timestamp1">Enter the first timestamp (YYYY-MM-DDTHH:mm:ss):</label><br>
+    <input type="datetime-local" id="timestamp1" required><br><br>
+
+    <label for="timestamp2">Enter the second timestamp (YYYY-MM-DDTHH:mm:ss):</label><br>
+    <input type="datetime-local" id="timestamp2" required><br><br>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("timestamp-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get the input values
+      let timestamp1 = document.getElementById("timestamp1").value;
+      let timestamp2 = document.getElementById("timestamp2").value;
+
+      // Convert the timestamps to Date objects
+      let date1 = new Date(timestamp1);
+      let date2 = new Date(timestamp2);
+
+      // Check if the inputs are valid dates
+      if (isNaN(date1) || isNaN(date2)) {
+        document.getElementById("result").innerText = "Invalid timestamp format.";
+      } else {
+        // Calculate the difference in milliseconds
+        let timeDifference = date2 - date1;
+
+        // Convert milliseconds to minutes
+        let minutesPassed = timeDifference / (1000 * 60);
+
+        document.getElementById("result").innerText = `Minutes passed: ${minutesPassed}`;
+      }
+    });
+  </script>
+-->
