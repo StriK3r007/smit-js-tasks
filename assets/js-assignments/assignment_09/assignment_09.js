@@ -2,16 +2,16 @@
 // Write a function that takes a Date object and returns a formatted string like:
 // "Saturday, 9 August 2025".
 function task01() {
-    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const date = new Date()
-    const day = days[date.getDay()]
-    const dayNum = date.getDate()
-    const month = months[date.getMonth()]
-    const year = date.getFullYear()
-    const customDate = `${day}, ${dayNum} ${month} ${year}`
-    console.log(customDate)
-    document.getElementById('task_01_output').innerHTML = customDate
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const date = new Date()
+  const day = days[date.getDay()]
+  const dayNum = date.getDate()
+  const month = months[date.getMonth()]
+  const year = date.getFullYear()
+  const customDate = `${day}, ${dayNum} ${month} ${year}`
+  console.log(customDate)
+  document.getElementById('task_01_output').innerHTML = customDate
 }
 
 // task_02. Elapsed Time in Minutes
@@ -20,10 +20,10 @@ function task02() {
   const timeStampOne = document.getElementById("timeStampOne").value
   const timeStampTwo = document.getElementById("timeStampTwo").value
   const task_02_output = document.getElementById("task_02_output")
-  if (timeStampOne == '' || timeStampTwo =='') {
-    return task_02_output.innerText = 'Please select valid time'
+  if (timeStampOne == '' || timeStampTwo == '') {
+    return task_02_output.innerText = 'Please select valid timestamps'
   }
-  const timeStampDiff = (new Date(timeStampTwo) - new Date(timeStampOne)) / (1000*60)
+  const timeStampDiff = (new Date(timeStampTwo) - new Date(timeStampOne)) / (1000 * 60)
   console.log(timeStampDiff,)
   task_02_output.innerText = `${timeStampDiff} minutes have passed`
 }
@@ -35,6 +35,10 @@ function task03() {
   const task_03_output = document.getElementById('task_03_output')
   const currentDate = new Date()
   const birthDate = new Date(birthdate)
+
+  if (birthdate == '') {
+    return task_03_output.innerText = 'Please select valid birth date'
+  }
 
   let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
   let ageMonths = currentDate.getMonth() - birthDate.getMonth()
@@ -63,17 +67,19 @@ function task04() {
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September"];
   const firstDayOfCurrentMonth = days[currentDate.getDay()]
-  task_04_output.innerText = `First day of ${months[currentDate.getMonth()]} is ${firstDayOfCurrentMonth}` 
+  task_04_output.innerText = `First day of ${months[currentDate.getMonth()]} is ${firstDayOfCurrentMonth}`
 }
 
 // task_05. Get Last Day of Current Month 
 // Write a function that returns the last date (e.g., 31, 30, or 28/29) of the current month.
 function task05() {
   const currentDate = new Date()
-  currentDate.setDate(1)
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const firstDayOfCurrentMonth = days[currentDate.getDay()]
-  console.log(firstDayOfCurrentMonth)
+  currentDate.setMonth(currentDate.getMonth() + 1)
+  currentDate.setDate(0)
+
+  const lastDayOfCurrentMonth = currentDate.getDate()
+
+  console.log(lastDayOfCurrentMonth,)
 }
 
 // task_06. Human-Friendly "Time Ago"
@@ -84,7 +90,7 @@ function task05() {
 // ○ "1 day ago" based on a past timestamp.
 function task06() {
   const currentDate = new Date()
-  const timeStamp= document.getElementById('timeStamp_06').value
+  const timeStamp = document.getElementById('timeStamp_06').value
   const pastDate = new Date(timeStamp)
   const task_06_output = document.getElementById('task_06_output')
 
@@ -108,7 +114,7 @@ function task06() {
   } else if (days < 30) {
     return task_06_output.innerText = `${days} day${days > 1 ? 's' : ''} ago`;
   } else {
-    return task_06_output.innerText = pastDate.toLocaleDateString();  
+    return task_06_output.innerText = pastDate.toLocaleDateString();
   }
 }
 
@@ -124,8 +130,8 @@ function task07() {
   }
 
   const interval = setInterval(() => {
-    const now = new Date();
-    const timeDifference = futureDate - now;
+    const currentDate = new Date();
+    const timeDifference = futureDate - currentDate;
 
     if (timeDifference <= 0) {
       clearInterval(interval);
@@ -144,12 +150,77 @@ function task07() {
 
 // task_08. Time Difference in Hours and Minutes
 // Given two dates, return the difference in hours and minutes, like: "3 hours 25 minutes".
+function task08() {
+  const firstdate = document.getElementById('firstdate').value
+  const secondate = document.getElementById('seconddate').value
+  const task_08_output = document.getElementById('task_08_output')
+  const firstDate = new Date(firstdate)
+  const secondDate = new Date(secondate)
+
+  if (firstDate == '' || secondate == '') {
+    return task_08_output.innerText = 'Please select valid dates'
+  }
+
+  const dateDiff = secondDate - firstDate
+
+  const seconds = Math.floor(dateDiff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  // const days = Math.floor(hours / 24);
+
+  task_08_output.innerText = (`Time difference is ${hours} hours, and ${minutes} minutes`)
+}
 
 // task_09. Check if Date is Weekend or Weekday
 // Write a function that returns "Weekend" or "Weekday" based on a given date string.
+function task09() {
+  const currentdate = document.getElementById('currentdate').value
+  const task_09_output = document.getElementById('task_09_output')
+  const currentDate = new Date(currentdate)
+
+  if (currentdate == '') {
+    task_09_output.innerText = 'Please select valid date'
+    return
+  }
+
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dayOfWeek = currentDate.getDay();
+
+  if (dayOfWeek === 0 || dayOfWeek === 6) {
+    task_09_output.innerText = `${days[currentDate.getDay()]}, is a Weekend`;
+  } else {
+    task_09_output.innerText = `${days[currentDate.getDay()]}, is a Weekday`;
+  }
+}
 
 // task_10. Compare Birthdays
 // Ask for two people’s birthdates and return who is older and by how many years/days.
+function task10() {
+  const firstdate = document.getElementById('firstPersonDate').value;
+  const seconddate = document.getElementById('secondPersonDate').value;
+  const task_10_output = document.getElementById('task_10_output');
+  const firstDate = new Date(firstdate);
+  const secondDate = new Date(seconddate);
+
+  if (firstdate == '' || seconddate == '') {
+    return task_10_output.innerText = 'Please select valid dates';
+  }
+
+  const diffTime = Math.abs(firstDate - secondDate);
+
+  const diffYears = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365)); // years
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) % 365; // days
+
+  if (firstDate < secondDate) {
+    task_10_output.innerText = `First Person is older by ${diffYears} years and ${diffDays} days.`;
+  } else if (firstDate > secondDate) {
+    task_10_output.innerText = `Second Person is older by ${diffYears} years and ${diffDays} days.`;
+  } else {
+    task_10_output.innerText = "Both are the same age.";
+  }
+
+  console.log(`1st Person: ${firstDate} ---- 2nd Person: ${secondDate}`);
+}
 
 // task_11. Recurring Alarm Checker
 // Given a day and time (e.g., "Monday 08:00"), check if the current date/time matches that schedule.
