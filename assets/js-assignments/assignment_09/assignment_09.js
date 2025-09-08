@@ -224,6 +224,26 @@ function task10() {
 
 // task_11. Recurring Alarm Checker
 // Given a day and time (e.g., "Monday 08:00"), check if the current date/time matches that schedule.
+function task11() {
+  const currentDate = new Date()
+  const userdate = document.getElementById("alarmCheckerDate").value
+  const task_11_output = document.getElementById('task_11_output');
+  const userDate = new Date(userdate)
+
+  if (!userdate) {
+        task_11_output.innerText = 'Please select valid date';
+        return
+  }
+
+  if (currentDate.getDate() === userDate.getDate() && 
+  currentDate.getMonth() === userDate.getMonth() && 
+  currentDate.getFullYear() === userDate.getFullYear()) {
+        return task_11_output.innerText = 'Matched';
+  }
+  else {
+        return task_11_output.innerText = 'Not Matched';
+  }
+}
 
 // task_12. Date Validator
 // Write a function that checks whether a given date string is a valid date (e.g., using Date.parse() or new Date()).
@@ -234,9 +254,83 @@ function task10() {
 // ● "Yesterday at 11:00 AM"
 // ● "4 days ago"
 // depending on how recent it is.
+function task13() {
+  const currentDate = new Date();
+  const userdate = document.getElementById("relativeDateFormatter").value;
+  const userDate = new Date(userdate);
+
+  if (isNaN(userDate)) {
+    task_13_output.innerText = 'Please select a valid date';
+    return;
+  }
+
+  const formatTime = (date) => {
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+    return `${hours}:${formattedMinutes} ${ampm}`;
+  };
+
+  const isToday = userDate.toDateString() === currentDate.toDateString();
+
+  const isYesterday = (new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 1)).toDateString() === userDate.toDateString();
+
+  const timeDiff = currentDate - userDate;
+  const diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+  const diffHours = Math.floor(timeDiff / (1000 * 3600));
+  const diffMinutes = Math.floor(timeDiff / (1000 * 60));
+
+  if (isToday) {
+    task_13_output.innerText = `Today at ${formatTime(userDate)}`;
+  } else if (isYesterday) {
+    task_13_output.innerText = `Yesterday at ${formatTime(userDate)}`;
+  } else if (diffDays > 1) {
+    task_13_output.innerText = `${diffDays} days ago`;
+  } else if (diffHours > 0) {
+    task_13_output.innerText = `${diffHours} hours ago`;
+  } else if (diffMinutes > 0) {
+    task_13_output.innerText = `${diffMinutes} minutes ago`;
+  } else {
+    task_13_output.innerText = 'Just now';
+  }
+}
+
 
 // task_14. Generate Dates for the Next 7 Days
 // Return an array of dates (in DD-MM-YYYY format) for the next 7 days from today.
+function task14() {
+  const userdate = document.getElementById("nextSevenDates").value
+  const userDate = new Date(userdate); // starting date
+  const dateArray = []; // to store the next 7 days in DD-MM-YYYY format
+  const task_14_output = document.getElementById("task_14_output")
+
+  if (isNaN(userDate)) {
+    task_14_output.innerText = 'Please select a valid date';
+    return;
+  }
+
+  // Loop through the next 7 days
+  for (let i = 0; i < 7; i++) {
+    // Clone the userDate to avoid modifying the original date
+    const nextDate = new Date(userDate);
+    nextDate.setDate(userDate.getDate() + i); // increment the date
+
+    // Format the date as DD-MM-YYYY
+    const day = nextDate.getDate().toString().padStart(2, '0'); // Ensure two digits
+    const month = (nextDate.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
+    const year = nextDate.getFullYear();
+
+    // Push the formatted date to the array
+    dateArray.push(`${day}-${month}-${year}`);
+  }
+  task_14_output.innerHTML = ""
+  for (i = 0; i < dateArray.length; i++) {
+    task_14_output.innerHTML += `</br> ${i+1}: ${dateArray[i]}`
+  }
+}
 
 // task_15. Time Slot Generator
 // Create a function that generates available 30-minute time slots between 9 AM to 5 PM for a specific date.
@@ -252,6 +346,18 @@ function task10() {
 
 // task_19. Format Date as ISO String Without Time
 // Format the current date as YYYY-MM-DD (without time), using a custom formatter.
+function task_19() {
+  const currentDate = new Date()
+  let month = currentDate.getMonth() + 1
+  let year = currentDate.getFullYear()
+  let date = currentDate.getDate()
+  
+  month =  month < 10 ? "0" + month : month.toString()
+  date = date < 10 ? "0" + date : date.toString()
+  // month: month.toString().padStart(2, '0')
+
+  console.log(`${year}-${month}-${date}`)
+}
 
 // task_20. Get the Number of Days in Any Month
 // Write a function that takes a month and year, and returns how many days are in that month (handle leap years too).
