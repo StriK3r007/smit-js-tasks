@@ -23,15 +23,31 @@
                 <!-- TO-DO - App -->
                 <div class="lg:w-1/2 w-full m-auto">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-4 text-gray-900 "><span class="font-bold">TO-DO</span> App</h2>
-                        <div class="flex flex-row justify-between bg-gray-300 rounded-3xl">
-                            <input class="p-3 rounded-3xl w-full text-purple-600 outline-0" type="text" id="todoText" placeholder="Add your task..." maxlength="75">
-                            <!-- <input class="w-1/10 rounded-3xl py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" type="button" value="Add" id="todoAdd"> -->
-                            <button class="w-1/8 rounded-3xl py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="todoAdd" onclick="toDoApp()">Add</button>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-4 text-gray-900"><span class="font-bold">Stopwatch</span></h2>
+                        <div class="flex flex-row justify-between bg-gray-300 rounded-3xl p-5">
+                            <div class="flex flex-col relative">
+                                <span class="xl:text-9xl lg:text-8xl sm:text-8xl text-6xl font-bold mb-5">00</span>
+                                <span class="text-1xl font-normal absolute bottom-0 right-0">Minutes</span>
+                            </div>
+                            <div class="flex flex-col align-baseline">
+                                <span class="xl:text-9xl lg:text-8xl sm:text-8xl text-6xl font-bold block">:</span>
+                            </div>
+                            <div class="flex flex-col relative">
+                                <span class="xl:text-9xl lg:text-8xl sm:text-8xl text-6xl font-bold mb-5">00</span>
+                                <span class="text-1xl font-normal absolute bottom-0 right-0">Seconds</span>
+                            </div>
+                            <div class="flex flex-col align-baseline">
+                                <span class="xl:text-9xl lg:text-8xl sm:text-8xl text-6xl font-bold block">:</span>
+                            </div>
+                            <div class="flex flex-col relative">
+                                <span class="xl:text-9xl lg:text-8xl sm:text-8xl text-6xl font-bold mb-5">00</span>
+                                <span class="text-1xl font-normal absolute bottom-0 right-0">Milliseconds</span>
+                            </div>
                         </div>
-                        <div class="mt-4">
-                            <ul id="todoList"></ul>
-                            <button class="w-full rounded-3xl py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="todoAdd" onclick="toDoDeleteAll()">Clear All</button>
+                        <div class="flex flex-row justify-between rounded-3xl gap-10 mt-4">
+                            <button class="w-full rounded-3xl py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="stopWatchStart" onclick="stopWatchStart()">Start</button>
+                            <button class="w-full rounded-3xl py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer hidden" id="stopWatchPause" onclick="stopWatchPause()">Pause</button>
+                            <button class="w-full rounded-3xl py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="stopWatchReset" onclick="stopWatchReset()">Reset</button>
                         </div>
                     </div>
                 </div>
