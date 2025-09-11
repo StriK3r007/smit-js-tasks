@@ -148,3 +148,36 @@ function task_03() {
     }
     task_03_output.appendChild(productContainer)
 }
+
+// task_04. Count Word Frequencies
+// Given a paragraph from a textarea, count the frequency of each word and display it as a list.
+function task_04() {
+    let textArea = document.getElementById('textarea').value.trim()
+    const task_04_output = document.getElementById('task_04_output')
+    task_04_output.innerHTML = '';
+    
+    if(!textArea) {
+        console.log("Please type something")
+        return
+    }
+
+    let wordsArr= textArea.split(/\s+/)
+    let wordsObj = {}
+
+    for (let i = 0; i < wordsArr.length; i++) {
+        let word = wordsArr[i].toLowerCase()
+        if(wordsObj[word]){
+            wordsObj[word] += 1
+        } else {
+            wordsObj[word]  = 1
+        }
+    }
+    // console.log(wordsObj)
+
+    for (let word    in wordsObj) {
+        const p = document.createElement('p');
+        p.innerText = `${word}: ${wordsObj[word]}`;
+        task_04_output.appendChild(p);
+    }
+    wordsArr = []
+}
