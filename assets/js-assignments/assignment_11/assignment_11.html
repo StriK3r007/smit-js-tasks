@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/output.css">
+    <title>JS Assignment 09 | TODO App</title>
+</head>
+<body>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 pt-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">JavaScript Assignment No. 11 (Date & time)</h1>
+                    <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                </div>
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                    This JavaScript assignment involved building a fully functional TO-DO application using loops and DOM manipulation. I applied `for` loops to render task items, and integrated event handling to add, edit, and delete to-dos dynamically. Through this project, I deepened my understanding of how JavaScript can interact with HTML elements to create responsive, interactive user interfaces.
+                </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <!--  -->
+                <!-- task-01 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span> Custom Date Formatter</h2>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task01()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_01_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-02 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span> Elapsed Time in Minutes</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Timestamp1: <span class="text-purple-700"><input type="datetime-local" id="timeStampOne"></span></p>
+                            <p class="text-2xl text-indigo-600">Timestamp2: <span class="text-purple-700"><input type="datetime-local" id="timeStampTwo"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task02()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_02_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-03 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span> Age Calculator from Full Birthdate</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Birth Date: <span class="text-purple-700"><input type="date" id="birthDate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task03()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_03_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-04 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span> Get First Day of Current Month</h2>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task04()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_04_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-06 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span> Custom Date Formatter</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Timestamp: <span class="text-purple-700"><input type="datetime-local" id="timeStamp_06"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task06()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_06_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-07 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 7.</span> Countdown Timer</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Future Date: <span class="text-purple-700"><input type="date" id="futuredate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task07()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_07_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-08 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 8.</span> Time Difference in Hours and Minutes</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">1st Date: <span class="text-purple-700"><input type="datetime-local" id="firstdate"></span></p>
+                            <p class="text-2xl text-indigo-600">2nd Date: <span class="text-purple-700"><input type="datetime-local" id="seconddate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task08()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_08_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-09 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 9.</span> Check if Date is Weekend or Weekday</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">1st Date: <span class="text-purple-700"><input type="date" id="currentdate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task09()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_09_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-10 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 10.</span> Compare Birthdays</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">1st Person Birthday: <span class="text-purple-700"><input type="date" id="firstPersonDate"></span></p>
+                            <p class="text-2xl text-indigo-600">2nd Person Birthday: <span class="text-purple-700"><input type="date" id="secondPersonDate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task10()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_10_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-11 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 11.</span> Recurring Alarm Checker</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Date: <span class="text-purple-700"><input type="date" id="alarmCheckerDate"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task11()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_11_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-13 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 13.</span> Custom Relative Date Formatter</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Date: <span class="text-purple-700"><input type="datetime-local" id="relativeDateFormatter"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task13()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_13_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+
+                <!-- task-14 -->
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 14.</span> Generate Dates for the Next 7 Days</h2>
+                        <div class="flex flex-col g-2">
+                            <p class="text-2xl text-indigo-600">Date: <span class="text-purple-700"><input type="date" id="nextSevenDates"></span></p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task14()">Run</button>
+                        </div>
+                        <div><p class="text-2xl text-indigo-600">Output: <span id="task_14_output" class="text-purple-700"></span></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assignment_11.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
