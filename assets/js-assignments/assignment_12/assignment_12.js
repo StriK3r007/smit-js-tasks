@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 // Note use console see the output.
 alert("Note: use console see the output.")
 
-=======
->>>>>>> bc528b6df2a6be8abbec22f2724ba5cb5345f029
 // task_01: Use map() to double each number in the array: [1, 2, 3, 4, 5].
 const task_01 = () => {
     console.clear()
