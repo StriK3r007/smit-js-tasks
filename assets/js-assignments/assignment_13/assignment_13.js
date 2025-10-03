@@ -20,19 +20,17 @@ const taskContainer = document.getElementById("task-container")
 const taskHeading = document.getElementById("task-heading")
 
 const task_02 = () => {
-    if(btn_02) {
-        btn_02.innerText = "Light"
+    if(taskContainer.classList.contains("bg-gray-100")) {
         taskContainer.classList.replace("bg-gray-100", "bg-gray-700")
         taskHeading.classList.replace("text-gray-900", "text-white")
         console.log("Dark-Mode")
-        btn_02 = false
+        btn_02.textContent = "Light"
     }
     else {
-        btn_02.innerText = "Dark"
         taskContainer.classList.replace("bg-gray-700", "bg-gray-100")
         taskHeading.classList.replace("text-white", "text-gray-900")
-        console.log("Light-Mode")
-        btn_02 = true
+        btn_02.textContent = "Dark"
+        console.log("Light-Mode")   
     }
 }
 btn_02.addEventListener("click", task_02)
@@ -117,17 +115,60 @@ string.addEventListener("input", task_06)
 
 // task_07:
 const password = document.getElementById("task-07-password")
+const regix = {
+    veryWeak: /^.{0,5}$/,
+    weak: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/,
+    strong: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+}
 const task_07 = () => {
     const task07Output = document.getElementById("task_07_output")
     text = password.value
-    if(text.length >= 8) {
-        task07Output.classList.add("text-green-500")
+    if (regix.veryWeak.test(password.value)){
+        task07Output.innerHTML = "Your password is very weak! Use more than 5 characters and add variety."
+        task07Output.classList.add("text-red-500")
+    }
+    if (regix.weak.test(password.value)){
+        task07Output.innerHTML = "Your password is weak. Try adding uppercase letters, numbers, and special characters."
+        task07Output.classList.add("text-red-500")
+    }
+    if (regix.strong.test(password.value)){
+        task07Output.innerHTML = "Your password is strong!"
         task07Output.classList.remove("text-red-500")
-        task07Output.innerText = "Strong Password"
+        task07Output.classList.add("text-green-500")
         return
     }
-    task07Output.classList.add("text-red-500")
-    task07Output.classList.remove("text-green-500")
-    task07Output.innerText = "Weak Password"
 }
 password.addEventListener("input", task_07)
+
+// task_08
+const taskForm = document.getElementById("task-08-form")
+const task08Output = document.getElementById("task_08_output")
+const formEmail = document.getElementById("task-08-email")
+const formPassword = document.getElementById("task-08-password")
+const formSubmit = document.getElementById("task-08-btn")
+
+const task_08 = (event) => {
+    if (!formEmail.value || !formPassword.value) {
+        // console.log("Please enter your credentials")
+        task08Output.innerHTML = "Please enter your credentials"
+        task08Output.classList.add("text-red-500")
+        return
+    }
+    if (regix.veryWeak.test(formPassword.value)){
+        task08Output.innerHTML = "Your password is very weak! Use more than 5 characters and add variety."
+        task08Output.classList.add("text-red-500")
+    }
+    if (regix.weak.test(formPassword.value)){
+        task08Output.innerHTML = "Your password is weak. Try adding uppercase letters, numbers, and special characters."
+        task08Output.classList.add("text-red-500")
+    }
+    if (regix.strong.test(formPassword.value)){
+        task08Output.innerHTML = "Your password is strong!, Login Successful"
+        task08Output.classList.remove("text-red-500")
+        task08Output.classList.add("text-green-500")
+        console.log(formEmail.value)
+        console.log(formPassword.value)
+    }
+    event.preventDefault();   
+}
+formSubmit.addEventListener("click", task_08)
