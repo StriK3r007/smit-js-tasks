@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/output.css">
-    <title>JS Assignment 12 | Array Loops Questions</title>
+    <title>JS Assignment 13 | Array Loops Questions</title>
 </head>
 <body id="body">
     <section class="text-gray-600 body-font">
@@ -26,40 +26,30 @@
                     <div class="bg-gray-100 p-6 rounded-lg">
                         <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 1.</span> Use map() to double each number in the array</h2>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_01()">Run</button>
-                        </div>
-                        <div>
-                            <p class="text-2xl text-indigo-600">Output:</p>
-                            <div id="task_01_output">
-                            </div>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="task_01_btn">Run</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- task-02 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 2.</span> Use map() to convert an array of strings to uppercase</h2>
+                    <div class="bg-gray-100 p-6 rounded-lg" id="task-container"> <!--bg-gray-700-->
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900" id="task-heading"><span class="font-bold">Task 2.</span> Use map() to convert an array of strings to uppercase</h2> <!--text-white-->
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_02()">Run</button>
-                        </div>
-                        <div>
-                            <p class="text-2xl text-indigo-600">Output:</p>
-                            <div id="task_01_output">
-                            </div>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="task_02_btn">Run</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- task-03 -->
-                <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 3.</span> Use map() to extract the names from an array of objects</h2>
-                        <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_03()">Run</button>
+                <div class="xl:w-1/4 md:w-1/2 p-4" id="task-03-main-container">
+                    <div class="bg-gray-100 p-6 rounded-lg" id="task-03-container">
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900" id="task-03-heading"><span class="font-bold">Task 3.</span> Use map() to extract the names from an array of objects</h2>
+                        <div class="mt-4" id="task-03-subDiv-01">
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="task_03_btn">Run</button>
                         </div>
-                        <div>
-                            <p class="text-2xl text-indigo-600">Output:</p>
+                        <div id="task-03-subDiv-02">
+                            <p class="text-2xl text-indigo-600" id="task-03-output">Output:</p>
                             <div id="task_01_output">
                             </div>
                         </div>
@@ -69,9 +59,13 @@
                 <!-- task-04 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span> Use map() to return the length of each word in the array</h2>
-                        <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_04()">Run</button>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 4.</span></h2>
+                        <div class="flex mt-4">
+                            <button class="w-full p-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="dec-btn">Dec</button>
+                            
+                            <input class="w-20 p-2" type="text" name="" id="num-value" value="1">
+
+                            <button class="w-full p-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="inc-btn">Inc</button>
                         </div>
                         <div>
                             <p class="text-2xl text-indigo-600">Output:</p>
@@ -84,9 +78,9 @@
                 <!-- task-05 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 5.</span> Use map() to add a suffix -done to each task in an array</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 5.</span> </h2>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_05()">Run</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" id="task_05_btn">Run</button>
                         </div>
                         <div>
                             <p class="text-2xl text-indigo-600">Output:</p>
@@ -99,13 +93,13 @@
                 <!-- task-06 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span> Use map() to square each number in an array</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 6.</span> </h2>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_06()">Run</button>
+                            <input class="my-4" type="text" id="task-06-text">
                         </div>
                         <div>
                             <p class="text-2xl text-indigo-600">Output:</p>
-                            <div id="task_01_output">
+                            <div id="task_06_output">
                             </div>
                         </div>
                     </div>
@@ -114,13 +108,13 @@
                 <!-- task-07 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
                     <div class="bg-gray-100 p-6 rounded-lg">
-                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 7.</span> Use map() to convert an array of prices to strings with a $ sign</h2>
+                        <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 7.</span> </h2>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_07()">Run</button>
+                            <input class="my-4" type="password" id="task-07-password">
                         </div>
                         <div>
                             <p class="text-2xl text-indigo-600">Output:</p>
-                            <div id="task_01_output">
+                            <div id="task_07_output">
                             </div>
                         </div>
                     </div>
@@ -131,7 +125,7 @@
                     <div class="bg-gray-100 p-6 rounded-lg">
                         <h2 class="sm:text-2xl text-lg font-medium title-font mb-2 text-gray-900"><span class="font-bold">Task 8.</span> Use map() to format an array of dates into readable strings</h2>
                         <div class="mt-4">
-                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer" onclick="task_08()">Run</button>
+                            <button class="w-full py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded hover:from-purple-600 hover:to-indigo-600 transition cursor-pointer">Run</button>
                         </div>
                         <div>
                             <p class="text-2xl text-indigo-600">Output:</p>
@@ -369,7 +363,7 @@
             </div>
         </div>
     </section>
-    <script src="./assignment_12.js"></script>
+    <script src="./assignment_13.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
