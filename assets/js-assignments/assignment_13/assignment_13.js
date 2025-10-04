@@ -297,8 +297,6 @@ const colorPicker = document.getElementById("color-picker")
 const checkBox = document.getElementById("check-box")
 
 colorPicker.addEventListener("input", () => {
-    if(checkBox.checked) {
-        taskColorPickerBody.style.backgroundColor = colorPicker.value
-        taskColorPickerBody.classList.remove("bg-gray-100")
-    }
+    taskColorPickerBody.classList.remove("bg-gray-100")
+    taskColorPickerBody.style.backgroundColor = colorPicker.value
 })
