@@ -294,9 +294,26 @@ showHideBtn.addEventListener("click", () => {
 // task_14
 const taskColorPickerBody = document.getElementById("task-color-picker-body")
 const colorPicker = document.getElementById("color-picker")
-const checkBox = document.getElementById("check-box")
 
 colorPicker.addEventListener("input", () => {
     taskColorPickerBody.classList.remove("bg-gray-100")
     taskColorPickerBody.style.backgroundColor = colorPicker.value
+})
+
+// task_15
+const checkBox = document.getElementById("check-box")
+const checkBoxSubmitButton = document.getElementById("check-box-submit-btn")
+const checkBoxError = document.getElementById("check-box-error")
+
+checkBoxSubmitButton.addEventListener("click", () => {
+    if(!checkBox.checked) {
+        checkBoxError.textContent = "Please check the agreement"
+        checkBoxError.classList.add("text-red-500")
+        checkBoxError.classList.remove("text-green-500")
+        return 
+    }
+    checkBoxError.textContent = "Form submitted successfuly!"
+    checkBoxError.classList.add("text-green-500")
+    checkBoxError.classList.remove("text-red-500")
+
 })
