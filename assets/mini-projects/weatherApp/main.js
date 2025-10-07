@@ -15,7 +15,7 @@ const weatherSearchLocation = document.getElementById("weather-search")
 const weatherRender = document.getElementById("weather-render")
 // const weatherClearButton = document.getElementById("weather-clear-button")
 
-// * currentDate
+// * currentDate and day
 const getCurrentDate = () => {
     const today = new Date()
     const day = today.getDate()
@@ -47,7 +47,7 @@ weatherSearchButton.addEventListener("click", () => {
 
             // weatherObjects
             const location = data.location;
-            const current = data.current;
+            const current = data.current; 
 
             if (cityLocation === location.name) {
                 if (!searchedLocations.some(item => item.location.name === location.name)) {
@@ -107,7 +107,6 @@ weatherSearchButton.addEventListener("click", () => {
             console.log(error)
         })
 })
-
 // weatherLocations.forEach(item => {
 //     if(cityLocation === item.city) {
 //         if(!searchedLocations.some(weatherLocations => weatherLocations.city === item.city)) {

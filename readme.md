@@ -26,3 +26,15 @@ This repository contains my JavaScript assignments and tasks. Below are the main
 
 
  tailwind cli command: npx @tailwindcss/cli -i .\assets\styles\input.css -o .\assets\styles\output.css --watch
+
+ <!-- TODO - Commands -->
+// TODO
+// FIXME
+// HACK
+// BUG
+// [ ]
+// [x]
+// DEBUG
+// REVIEW
+// TODO| FIXME |
+// NOTE
