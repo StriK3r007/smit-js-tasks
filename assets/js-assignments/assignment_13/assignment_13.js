@@ -9,7 +9,7 @@ const btn_03 = document.getElementById("task_03_btn")
 const body = document.getElementById("body")
 
 const task_01 = () => {
-    const randomColor ="#" + Math.floor(Math.random() * 16777215).toString(16)
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16)
     console.log(randomColor)
     body.style.backgroundColor = randomColor
     btn_01.innerText = randomColor
@@ -101,6 +101,13 @@ string.addEventListener("input", task_06)
 // task_07:
 const password = document.getElementById("task-07-password")
 const regex = {
+    firstName: /^[A-Za-z]{3,30}$/,
+    lastName: /^[A-Za-z]{3,30}$/,
+    // fullName: /^[A-Za-z\s]{3,30}$/,
+    fullName: /^[A-Za-z]+(\s[A-Za-z]+)*$/, // only allow space between words
+    email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+    phone: /^\+?[0-9]{10,15}$/,
+    // passwords
     veryWeak: /^.{0,5}$/,
     weak: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/,
     strong: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
@@ -203,7 +210,7 @@ countriesList.addEventListener("input", () => {
         citiesList.classList.add("opacity-50", "cursor-not-allowed")
         return
     }
-    
+
     countries.forEach(item => {
         if (countriesList.value === item.name) {
             citiesList.disabled = false
@@ -269,9 +276,109 @@ countriesList.addEventListener("input", () => {
         })
     }
 });
-*/ 
+*/
 
 // task_12
+// regEx errors
+regExErrors = {
+    fullNameError: document.getElementById("full-name-error"),
+    emailError: document.getElementById("email-error"),
+    phoneError: document.getElementById("phone-error"),
+    passwordError: document.getElementById("password-error"),
+    termsConditionError: document.getElementById("terms-condition-error")
+}
+
+const task12Form = document.getElementById("task-12-form")
+const task12UserName = document.getElementById("task-12-user-name")
+const task12UserEmail = document.getElementById("task-12-user-email")
+const task12UserPassword = document.getElementById("task-12-user-password")
+const task12ShowHidePassword = document.getElementById("task12-show-hide-password")
+const task12TermsCondition = document.getElementById("task-12-terms-condition")
+const task12Output = document.getElementById("task_12_output")
+
+const task12SubmitBtn = document.getElementById("task-12-submit-btn")
+task12SubmitBtn.classList.add("opacity-50", "cursor-not-allowed");
+task12SubmitBtn.disabled = true;
+
+task12UserName.addEventListener("input", () => {
+    if (!regex.fullName.test(task12UserName.value)) {
+        regExErrors.fullNameError.innerHTML = "Full name must be 3 to 30 characters";
+    } else {
+        regExErrors.fullNameError.innerHTML = "";
+    }
+});
+
+task12UserEmail.addEventListener("input", () => {
+    if (!regex.email.test(task12UserEmail.value)) {
+        regExErrors.emailError.innerHTML = "Enter a valid email address";
+    } else {
+        regExErrors.emailError.innerHTML = "";
+    }
+});
+
+task12UserPassword.addEventListener("input", () => {
+    if (!regex.strong.test(task12UserPassword.value)) {
+        regExErrors.passwordError.innerHTML = "Password must contain at least 8 characters, including letters, numbers, and special characters";
+    } else {
+        regExErrors.passwordError.innerHTML = "";
+    }
+});
+
+task12ShowHidePassword.addEventListener("click", () => {
+    if (task12UserPassword.type === "password") {
+        task12UserPassword.type = "text"
+        task12ShowHidePassword.value = "Hide"
+    }
+    else {
+        task12UserPassword.type = "password"
+        task12ShowHidePassword.value = "Show"
+
+    }
+})
+
+task12TermsCondition.addEventListener("change", () => {
+    if (!task12TermsCondition.checked) {
+        regExErrors.termsConditionError.innerHTML = "Please check our terms and conditions";
+        task12SubmitBtn.classList.add("opacity-50", "cursor-not-allowed");
+        task12SubmitBtn.disabled = true;
+    } else {
+        regExErrors.termsConditionError.innerHTML = "";
+        task12SubmitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+        task12SubmitBtn.classList.add("cursor-pointer");
+        task12SubmitBtn.disabled = false;
+    }
+});
+
+task12Form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let formValid = true;
+
+    if (!regex.fullName.test(task12UserName.value)) {
+        regExErrors.fullNameError.innerHTML = "Full name must be 3 to 30 letters";
+        formValid = false;
+    }
+
+    if (!regex.email.test(task12UserEmail.value)) {
+        regExErrors.emailError.innerHTML = "Enter a valid email address";
+        formValid = false;
+    }
+
+    if (!regex.strong.test(task12UserPassword.value)) {
+        regExErrors.passwordError.innerHTML = "Password must contain at least 8 characters, including letters, numbers, and special characters";
+        formValid = false;
+    }
+
+    if (!task12TermsCondition.checked) {
+        regExErrors.termsConditionError.innerHTML = "Please check our terms and conditions";
+        formValid = false;
+    }
+
+    if (formValid) {
+        task12Output.textContent = "Form submitted successfully"
+        task12Output.classList.add("text-green-500")
+    }
+});
 
 
 // task_13 
@@ -279,7 +386,7 @@ const passwordToShow = document.getElementById("task-13-password")
 const showHideBtn = document.getElementById("show-hide-password")
 
 showHideBtn.addEventListener("click", () => {
-    if(passwordToShow.type === "password") {
+    if (passwordToShow.type === "password") {
         passwordToShow.type = "text"
         showHideBtn.value = "Hide"
     }
@@ -306,14 +413,13 @@ const checkBoxSubmitButton = document.getElementById("check-box-submit-btn")
 const checkBoxError = document.getElementById("check-box-error")
 
 checkBoxSubmitButton.addEventListener("click", () => {
-    if(!checkBox.checked) {
+    if (!checkBox.checked) {
         checkBoxError.textContent = "Please check the agreement"
         checkBoxError.classList.add("text-red-500")
         checkBoxError.classList.remove("text-green-500")
-        return 
+        return
     }
     checkBoxError.textContent = "Form submitted successfuly!"
     checkBoxError.classList.add("text-green-500")
     checkBoxError.classList.remove("text-red-500")
-
 })
