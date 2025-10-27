@@ -8,27 +8,47 @@
     <title>JavaScript Tasks</title>
 </head>
 
-<body>
+<body class="scroll-smooth overflow-auto">
+    <header class="fixed w-full" id="header">
+        <div class="flex justify-between p-4 bg-amber-300">
+            <div>
+                <h1 class="text-2xl text-gray-700 font-bold">SMIT - Quetta (Batch - 01)</h1>
+            </div>
+            <nav class="flex items-center gap-4">
+                <ul class="flex gap-8 list-none text-2xl">
+                    <li><a href="#javascript-assignments" class="text-gray-800 hover:text-gray-600 transition">JavaScript</a></li>
+                    <li><a href="#mini-projects" class="text-gray-800 hover:text-gray-500 transition">Mini Projects</a></li>
+                    <li><a href="#firebase-assignments" class="text-gray-800 hover:text-gray-500 transition">Firebase</a></li>
+                </ul>
+                <div>
+                    <button type="button" class="cursor-pointer flex items-center" id="darkMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <section class="text-gray-600 body-font" id="javascript-assignments">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap w-full mb-20">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">JavaScript Assignments</h1>
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-500 section-title">JavaScript Assignments</h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 section-description">
                     Having completed various JavaScript assignments, I've gained practical experience with core concepts such as functions, loops, arrays, objects, and DOM manipulation. These tasks helped deepen my understanding of JavaScript and improved my ability to solve real-world coding problems efficiently.
                 </p>
             </div>
             <div class="flex flex-wrap -m-4">
                 <!-- Assignment-01 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 01</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 01</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_01/assignment_01.html" target="_blank">Preview <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Alert</span> | <span class="text-indigo-500">Prompt</span></p>
@@ -37,12 +57,12 @@
 
                 <!-- Assignment-02 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 02</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 02</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_02/assignment_02.html" target="_blank">Preview <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">String Concatenation</span></p>
@@ -51,12 +71,12 @@
 
                 <!-- Assignment-03 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 03</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 03</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_03/assignment_03.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">if</span> | <span class="text-indigo-500">if else</span> | <span class="text-indigo-500">else if</span></p>
@@ -65,12 +85,12 @@
 
                 <!-- Assignment-04 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 04</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 04</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_04/assignment_04.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Functions</span></p>
@@ -79,12 +99,12 @@
 
                 <!-- Assignment-05 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 05</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 05</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_05/assignment_05.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">DOM Manipulation</span></p>
@@ -93,12 +113,12 @@
 
                 <!-- Assignment-06 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 06</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 06</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_06/assignment_06.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Arrays | Array Methods</span></p>
@@ -107,12 +127,12 @@
 
                 <!-- Assignment-07 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 07</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 07</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_07/assignment_07.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Loops | For Loop | While Loop </span></p>
@@ -121,12 +141,12 @@
 
                 <!-- Assignment-08 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind | sweetalert2</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 08</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 08</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_08/assignment_08.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">TO-DO App </span></p>
@@ -135,12 +155,12 @@
 
                 <!-- Assignment-09 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind | sweetalert2</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 09</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 09</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_09/assignment_09.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Date & Time </span></p>
@@ -149,12 +169,12 @@
 
                 <!-- Assignment-10 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind | sweetalert2</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 10</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 10</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_10/assignment_10.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Stop Watch </span></p>
@@ -163,12 +183,12 @@
 
                 <!-- Assignment-11 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 11</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 11</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_11/assignment_11.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Object</span></p>
@@ -177,12 +197,12 @@
 
                 <!-- Assignment-12 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 12</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 12</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_12/assignment_12.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Map | Filter | Reduce</span></p>
@@ -191,12 +211,12 @@
 
                 <!-- Assignment-13 -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | html | css | tailwind</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Assignment 13</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Assignment 13</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/js-assignments/assignment_13/assignment_13.html" target="_blank">Preview <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
                         </div>
                         <p class="leading-relaxed text-base"><span class="text-yellow-500">JavaScript</span> | <span class="text-indigo-500">Events | DOM Manipulation | Regex | forEach</span></p>
@@ -211,10 +231,10 @@
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap w-full mb-20">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">JavaScript Mini Projects</h1>
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-500 section-title">JavaScript Mini Projects</h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 section-description">
                     Having completed various JavaScript assignments, I've gained practical experience with core concepts such as functions, loops, arrays, objects, and DOM manipulation. These tasks helped deepen my understanding of JavaScript and improved my ability to solve real-world coding problems efficiently.
                 </p>
             </div>
@@ -222,12 +242,12 @@
 
                 <!-- Weather App -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Weather App</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Weather App</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/mini-projects/weatherApp/weatherApp.html" target="_blank">Preview <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
                     </div>
@@ -242,23 +262,23 @@
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap w-full mb-20">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Firebase Assignments</h1>
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-500 section-title">Firebase Assignments</h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 section-description">
                     Having completed various JavaScript assignments, I've gained practical experience with core concepts such as functions, loops, arrays, objects, and DOM manipulation. These tasks helped deepen my understanding of JavaScript and improved my ability to solve real-world coding problems efficiently.
                 </p>
             </div>
             <div class="flex flex-wrap -m-4">
 
-                <!-- Weather App -->
+                <!-- Firebase -->
                 <div class="xl:w-1/4 md:w-1/2 p-4">
-                    <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg assignment-card">
                         <img class="h-40 rounded w-full object-cover object-center mb-6"
                             src="./assets/images/javascript.png" alt="content">
                         <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">javascript | firebase</h3>
                         <div class="flex justify-between items-center">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Firebase Authentication</h2>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4 assignment-title">Firebase Authentication</h2>
                             <a class="tracking-widest text-indigo-500 text-xs font-medium title-font flex" href="./assets/firebase/firebase_01/pages/signIn.html" target="_blank">Preview <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
                     </div>
@@ -267,6 +287,8 @@
         </div>
     </section>
     <!-- ! Firebase Assignments-end -->
+
+    <script src="./assets/app.js"></script>
 </body>
 
 </html>
