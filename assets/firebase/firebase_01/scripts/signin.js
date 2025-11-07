@@ -25,3 +25,18 @@ form.addEventListener("submit", (event) => {
 // sign in via google
 
 // sign in via github
+
+// show-hide password
+const showPassword = document.getElementById("show-password")
+
+showPassword.addEventListener("click", () => {
+    if (password.type === "password") {
+        password.type = "text"
+        showPassword.innerText = "🙈"
+    }
+    else {
+        password.type = "password"
+        showPassword.innerText = "🙉"
+
+    }
+})

@@ -4,12 +4,12 @@ import { auth } from "./firebaseconfig.js"
 const form = document.getElementById("form")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
-const retypePassword = document.getElementById("retype-password")
+const confirmPassword = document.getElementById("confirm-password")
 
 // sign up via email
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    if (password.value === retypePassword.value) {   
+    if (password.value === confirmPassword.value) {   
         createUserWithEmailAndPassword(auth, email.value, password.value)
         .then((userCredential) => {
             // Signed up 
@@ -25,5 +25,19 @@ form.addEventListener("submit", (event) => {
         });
     } else {
         alert("Password and confirm password should be same")
+    }
+})
+
+const showPassword = document.getElementById("show-password")
+
+showPassword.addEventListener("click", () => {
+    if (password.type === "password") {
+        password.type = "text"
+        showPassword.innerText = "🙈"
+    }
+    else {
+        password.type = "password"
+        showPassword.innerText = "🙉"
+
     }
 })
