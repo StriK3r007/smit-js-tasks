@@ -79,7 +79,7 @@ darkMode.addEventListener("click", () => {
 
 
 
-
+console.log("run")
 
 /* 
 const darkMode = document.getElementById("darkMode");
