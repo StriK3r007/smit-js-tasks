@@ -23,12 +23,12 @@ This repository contains my JavaScript assignments and tasks. Below are the main
 13. [Assignment 13: ](https://strik3r007.github.io/smit-js-tasks/src/js-assignments/assignment_13/assignment_13.html)
 
 ## Mini Projects
-1. [WeatWeather App](http://127.0.0.1:5501/src/mini-projects/weatherApp/weatherApp.html)
+1. [WeatWeather App](https://strik3r007.github.io/smit-js-tasks/src/mini-projects/weatherApp/weatherApp.html)
 
 ## Firebase
 
 ## Firestore
-1. [TODO App](http://127.0.0.1:5501/src/firebase-assignments/todo-app/index.html)
+1. [TODO App](https://strik3r007.github.io/smit-js-tasks/src/firebase-assignments/todo-app/index.html)
 
 
 ### Useful commands
