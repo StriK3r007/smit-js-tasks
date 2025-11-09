@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/styles/output.css">
+    <title>ToDos</title>
+</head>
+
+<body>
+    <section class="body-font w-screen min-h-screen bg-gradient-to-r from-[#f43f5e] via-[#db2777] to-[#ef4444]">
+        <div class="container mx-auto flex flex-col justify-center items-center p-2 gap-4">
+            <!-- todo add - container -->
+            <div class="text-gray-500 bg-white p-6 h-full rounded-2xl w-full sm:w-140 shadow hover:shadow-2xl transition-shadow">
+                <div>
+                    <form class="flex flex-col justify-between items-center gap-2 w-full" id="todo-form">
+                        <div class="flex flex-col gap-2 w-full">
+                            <input class="p-2 rounded border-2 border-[#db2777]" type="text" id="todo-title" placeholder="Enter your todo title here...">
+                            <textarea class="p-2 rounded border-2 border-[#db2777]" name="todo-text" id="todo-desc" placeholder="Provide more details about your todo..."></textarea>
+                        </div>
+                        <div class="self-center w-full">
+                            <input class="p-2 w-full text-white font-bold rounded-3xl cursor-pointer hover:shadow active:shadow-2xs transition bg-gradient-to-r from-[#f43f5e] via-[#db2777] to-[#ef4444]" type="submit" value="Add todo">
+                        </div>
+                    </form>
+                </div>
+                <div id="toast-box" class="shadow rounded-2xl py-2 mt-2 hidden">
+                    <div class="text-center w-full">
+                        <span class="font-semibold" id="toast-message"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- todo display - container -->
+            <div class="text-gray-500 rounded-2xl w-full sm:w-140">
+                <div class="flex flex-col gap-2 overflow-y-scroll h-120 rounded-2xl" id="todo-container">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+
+</html>
