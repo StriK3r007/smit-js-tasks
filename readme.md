@@ -22,9 +22,16 @@ This repository contains my JavaScript assignments and tasks. Below are the main
 12. [Assignment 12: ](https://strik3r007.github.io/smit-js-tasks/src/js-assignments/assignment_12/assignment_12.html)
 13. [Assignment 13: ](https://strik3r007.github.io/smit-js-tasks/src/js-assignments/assignment_13/assignment_13.html)
 
+## Mini Projects
+1. [WeatWeather App](http://127.0.0.1:5501/src/mini-projects/weatherApp/weatherApp.html)
+
+## Firebase
+
+## Firestore
+1. [TODO App](http://127.0.0.1:5501/src/firebase-assignments/todo-app/index.html)
 
 
-
+### Useful commands
  tailwind cli command: npx @tailwindcss/cli -i .\assets\styles\input.css -o .\assets\styles\output.css --watch
 
  <!-- TODO - Commands -->
